@@ -16,6 +16,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  * Project: micronaut-test-web
  * *******************************
  */
+// todo: doesn't work!!! investigate and correct
 @MicronautTest
 class ReqAttrsClientTest {
     @Inject

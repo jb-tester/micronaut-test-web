@@ -12,6 +12,7 @@ import io.reactivex.Single;
  * Project: micronaut-test-web
  * *******************************
  */
+// todo: doesn't work!!! investigate and correct
 @Client("/reqattrs1")
 @RequestAttributes({
         @RequestAttribute(name = "reqAttr3", value = "boo"),
