@@ -26,4 +26,9 @@ class PathVarsAndQueryParamsClientTest {
     void testMethod2Client() {
         assertEquals("method2 foo bar7", client.method2("foo","bar7").blockingGet());
     }
+
+    @Test
+    void testMethod3Client() {
+        assertEquals("method3 foo", client.method3("foo").blockingGet());
+    }
 }
