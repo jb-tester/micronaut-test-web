@@ -1,6 +1,6 @@
 package com.mytests.micronaut.testWeb;
 
-import hello.world.utils.MyData;
+import com.mytests.micronaut.testWeb.utils.MyData;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
 import io.micronaut.http.annotation.PathVariable;
@@ -8,7 +8,7 @@ import io.micronaut.http.annotation.QueryValue;
 
 import javax.annotation.Nullable;
 
-@Controller("/new")
+@Controller("/pathvars")
 public class PathVarsAndQueryParamsController {
 
     @Get(value="/method1/{pvar1:foo[0-9]|bar[0-9]}")
@@ -26,6 +26,7 @@ public class PathVarsAndQueryParamsController {
     public String method3(@Nullable @PathVariable("pvar4") String pvar4){
         return "method3 "+pvar4;
     }
+
     @Get(value = "/method4/{+pvar5}{?p1,p2}")
     public String method4(@PathVariable("pvar5") String pv5, @Nullable @QueryValue String p1,
                           @Nullable @QueryValue("p2") String param2){

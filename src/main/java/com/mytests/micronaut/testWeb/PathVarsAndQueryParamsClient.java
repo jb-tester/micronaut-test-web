@@ -4,8 +4,9 @@ import io.micronaut.http.annotation.Get;
 import io.micronaut.http.annotation.PathVariable;
 import io.micronaut.http.client.annotation.Client;
 import io.reactivex.Single;
-
-@Client("/new")
+import io.reactivex.annotations.Nullable;
+ /** todo: is it ok that methods are shown as unused until they are used in test? **/
+@Client("/pathvars")
 public interface PathVarsAndQueryParamsClient {
 
     @Get("/method1/{pvar11}")
