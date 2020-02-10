@@ -7,7 +7,7 @@ import io.reactivex.Single;
 
 import javax.annotation.Nullable;
 
-@Client("/pathvars")
+@Client("/pathvars_as_fragments")
 public interface PathVarsAsFragmentPartsClient {
 
     @Get(value = "/method1{/pvar1:3}")

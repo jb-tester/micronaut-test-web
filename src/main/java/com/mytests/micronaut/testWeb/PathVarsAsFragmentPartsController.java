@@ -6,7 +6,7 @@ import io.micronaut.http.annotation.PathVariable;
 
 import javax.annotation.Nullable;
 
-@Controller("/pathvars")
+@Controller("/pathvars_as_fragments")
 public class PathVarsAsFragmentPartsController {
 
     // method with optional path fragment:

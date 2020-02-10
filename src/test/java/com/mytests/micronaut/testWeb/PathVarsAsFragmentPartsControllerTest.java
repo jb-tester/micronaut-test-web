@@ -23,28 +23,28 @@ class PathVarsAsFragmentPartsControllerTest {
     @Test
     void method1() {
         String response = client.toBlocking()
-                .retrieve(HttpRequest.GET("/pathvars/method1/foo"));
+                .retrieve(HttpRequest.GET("/pathvars_as_fragments/method1/foo"));
         assertEquals("method1 foo", response);
     }
 
     @Test
     void method2() {
         String response = client.toBlocking()
-                .retrieve(HttpRequest.GET("/pathvars/method2/test3"));
+                .retrieve(HttpRequest.GET("/pathvars_as_fragments/method2/test3"));
         assertEquals("method2 test3", response);
     }
 
     @Test
     void method3() {
         String response = client.toBlocking()
-                .retrieve(HttpRequest.GET("/pathvars/method3/3test"));
+                .retrieve(HttpRequest.GET("/pathvars_as_fragments/method3/3test"));
         assertEquals("method3 test3", response);
     }
 
     @Test
     void method4() {
         String response = client.toBlocking()
-                .retrieve(HttpRequest.GET("/pathvars/method4/test7atest"));
+                .retrieve(HttpRequest.GET("/pathvars_as_fragments/method4/test7atest"));
         assertEquals("method4 test7a", response);
     }
 }
