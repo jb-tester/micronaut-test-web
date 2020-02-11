@@ -13,10 +13,10 @@ public interface PathVarsAndQueryParamsClient {
     @Get(uri = "/method1/{pvar11:foo[0-9]|bar[0-9]}")
     Single<String> method1(@PathVariable("pvar11") String p);
 
-    @Get(value="/method2/{pvar2}/{pvar3:...[0-9]}")
+    @Get("/method2/{pvar2}/{pvar3:...[0-9]}")
     Single<String> method2(@PathVariable String pvar2, @PathVariable String pvar3);
 
-    @Get(uri = "/method3{/pvar4:3}")
+    @Get("/method3{/pvar4:3}")
     Single<String> method3(@Nullable @PathVariable() String pvar4 );
 
     @Get("/method4/{+pvar5}{?p1,p2}")

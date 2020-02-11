@@ -11,7 +11,7 @@ import javax.annotation.Nullable;
 @Controller("/pathvars")
 public class PathVarsAndQueryParamsController {
 
-    @Get(value="/method1/{pvar1:foo[0-9]|bar[0-9]}")
+    @Get("/method1/{pvar1:foo[0-9]|bar[0-9]}")
     public String method1(@PathVariable("pvar1") String p){
 
         return "method1 "+p;
