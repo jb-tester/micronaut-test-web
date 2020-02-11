@@ -1,7 +1,5 @@
 package com.mytests.micronaut.testWeb;
 
-import io.micronaut.context.ApplicationContext;
-import io.micronaut.runtime.server.EmbeddedServer;
 import io.micronaut.test.annotation.MicronautTest;
 import org.junit.jupiter.api.Test;
 
@@ -19,9 +17,9 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 
 @MicronautTest
-class ReqAttrsClientTest {
+class ReqAttrsClient2Test {
     @Inject
-    ReqAttrsClient client;
+    ReqAttrsClient2 client;
     @Inject
     ReqAttrsClientFilter2 filter;
     @Test

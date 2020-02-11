@@ -18,7 +18,7 @@ import io.reactivex.Single;
         @RequestAttribute(name = "reqAttr4", value = "100")
 })
 @Client("/reqattrs2")
-public interface ReqAttrsClient {
+public interface ReqAttrsClient2 {
 
     @Get("/test2")
     Single<String> testReqAttr2();
