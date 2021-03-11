@@ -23,14 +23,27 @@ public class PathVarsAsFragmentPartsController {
     }
     // method with path variable as a fragment prefix
     @Get(value = "/method3/{pvar3:[0-9]}test")
-    public String method3(@PathVariable("pvar3") int pv){
+    public String method3(@PathVariable("pvar3") int pv) {
 
-        return "method3 test"+pv;
+        return "method3 test" + pv;
     }
+
     // method with path variable in a middle of a fragment
     @Get(value = "/method4/test{pvar4:[0-9]}{pvar5:[a-z]}test")
-    public String method4(@PathVariable("pvar5") String pv2, @PathVariable("pvar4") int pv1){
+    public String method4(@PathVariable("pvar5") String pv2, @PathVariable("pvar4") int pv1) {
 
-        return "method4 test"+pv1+pv2;
+        return "method4 test" + pv1 + pv2;
+    }
+
+    // simplest case
+    @Get("/method5/{pvar6}")
+    public String method5(@PathVariable("pvar6") String pv6) {
+        return "method5 test" + pv6;
+    }
+
+    // different names for path variables in client and server
+    @Get("/method6/{pv7}")
+    public String method6(@PathVariable("pv7") String pv7) {
+        return "method6 " + pv7;
     }
 }

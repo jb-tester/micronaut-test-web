@@ -14,11 +14,17 @@ public interface PathVarsAsFragmentPartsClient {
     Single<String> method1(@Nullable @PathVariable("pvar1") String p1);
 
     @Get(value = "/method2/test{pvar2:[0-9]}")
-    Single<String> method2(@PathVariable("pvar2")int p1);
+    Single<String> method2(@PathVariable("pvar2") int p1);
 
     @Get(value = "/method3/{pvar3:[0-9]}test")
-    Single<String> method3(@PathVariable("pvar3")int p1);
+    Single<String> method3(@PathVariable("pvar3") int p1);
 
     @Get(value = "/method4/test{pvar4:[0-9]}{pvar5:[a-z]}test")
-    Single<String> method4(@PathVariable("pvar4")int p1, @PathVariable("pvar5")String p2);
+    Single<String> method4(@PathVariable("pvar4") int p1, @PathVariable("pvar5") String p2);
+
+    @Get("/method5/{pvar6}")
+    Single<String> method5(@PathVariable("pvar6") String pv6);
+
+    @Get("method6/{pvar7}")
+    Single<String> method6(@PathVariable("pvar7") String pv7);
 }
