@@ -5,3 +5,12 @@
 GET http://localhost:8080/pathvars/method4/{{pvar5}}
 
 ###
+GET http://google.com
+
+###
+GET http://localhost:8080/inherited_test/m2
+
+
+
+###
+GET http://localhost:8080/inherited_test/m3/foo
